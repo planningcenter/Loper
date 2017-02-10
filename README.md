@@ -1,6 +1,6 @@
 ## Loper
 
-__Lo__cal __Per__sistent Store is a Key Value store for iOS.  It's written in Swift but fully compatable with Objective-C.
+**Lo**cal **Per**sistent Store is a Key Value store for iOS.  It's written in Swift but fully compatable with Objective-C.
 
 ---
 
