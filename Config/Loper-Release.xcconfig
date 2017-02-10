@@ -1,0 +1,9 @@
+//
+//  Loper-Release.xcconfig
+//  Loper
+//
+//  Created by Skylar Schipper on 2/9/17.
+//  Copyright (c) 2017 Planning Center
+//
+
+#include "Loper-Base.xcconfig"

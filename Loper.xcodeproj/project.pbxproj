@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		948FB0A21E4D046E002F0200 /* Loper.h in Headers */ = {isa = PBXBuildFile; fileRef = 948FB0A01E4D046E002F0200 /* Loper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		948FB0AF1E4D0489002F0200 /* LoperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0AE1E4D0489002F0200 /* LoperTests.m */; };
+		948FB0B11E4D0489002F0200 /* Loper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948FB09D1E4D046E002F0200 /* Loper.framework */; };
+		948FB0B91E4D0584002F0200 /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0B81E4D0584002F0200 /* Mutex.swift */; };
+		948FB0C01E4D0668002F0200 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0BD1E4D0668002F0200 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations -Wno-unreachable-code -Wno-ambiguous-macro -Wno-conversion "; }; };
+		948FB0C11E4D0668002F0200 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 948FB0BE1E4D0668002F0200 /* sqlite3.h */; };
+		948FB0CB1E4D0C2B002F0200 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0CA1E4D0C2B002F0200 /* Store.swift */; };
+		948FB0CE1E4D0FC2002F0200 /* SQLiteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0CD1E4D0FC2002F0200 /* SQLiteError.swift */; };
+		948FB0D21E4D1103002F0200 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0D11E4D1103002F0200 /* Database.swift */; };
+		948FB0D41E4D121F002F0200 /* StoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0D31E4D121F002F0200 /* StoreError.swift */; };
+		948FB0D61E4D1BDC002F0200 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0D51E4D1BDC002F0200 /* Query.swift */; };
+		948FB0D81E4D2044002F0200 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0D71E4D2044002F0200 /* Value.swift */; };
+		948FB0DA1E4D27C1002F0200 /* Normalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0D91E4D27C1002F0200 /* Normalizer.swift */; };
+		948FB0DC1E4D3497002F0200 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0DB1E4D3497002F0200 /* Logger.swift */; };
+		948FB0DE1E4D72A9002F0200 /* ResultBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0DD1E4D72A9002F0200 /* ResultBuilder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		948FB0B21E4D0489002F0200 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 948FB0941E4D046D002F0200 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 948FB09C1E4D046D002F0200;
+			remoteInfo = Loper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		948FB09D1E4D046E002F0200 /* Loper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Loper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		948FB0A01E4D046E002F0200 /* Loper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Loper.h; sourceTree = "<group>"; };
+		948FB0A11E4D046E002F0200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		948FB0AC1E4D0489002F0200 /* LoperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		948FB0AE1E4D0489002F0200 /* LoperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoperTests.m; sourceTree = "<group>"; };
+		948FB0B01E4D0489002F0200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		948FB0B81E4D0584002F0200 /* Mutex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
+		948FB0BD1E4D0668002F0200 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		948FB0BE1E4D0668002F0200 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		948FB0C41E4D06CF002F0200 /* Project-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Base.xcconfig"; sourceTree = "<group>"; };
+		948FB0C51E4D06E1002F0200 /* Project-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
+		948FB0C61E4D06EB002F0200 /* Project-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
+		948FB0C71E4D06F5002F0200 /* Loper-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Loper-Base.xcconfig"; sourceTree = "<group>"; };
+		948FB0C81E4D0700002F0200 /* Loper-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Loper-Release.xcconfig"; sourceTree = "<group>"; };
+		948FB0C91E4D070D002F0200 /* Loper-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Loper-Debug.xcconfig"; sourceTree = "<group>"; };
+		948FB0CA1E4D0C2B002F0200 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		948FB0CD1E4D0FC2002F0200 /* SQLiteError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteError.swift; sourceTree = "<group>"; };
+		948FB0D11E4D1103002F0200 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		948FB0D31E4D121F002F0200 /* StoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreError.swift; sourceTree = "<group>"; };
+		948FB0D51E4D1BDC002F0200 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		948FB0D71E4D2044002F0200 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		948FB0D91E4D27C1002F0200 /* Normalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Normalizer.swift; sourceTree = "<group>"; };
+		948FB0DB1E4D3497002F0200 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		948FB0DD1E4D72A9002F0200 /* ResultBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultBuilder.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		948FB0991E4D046D002F0200 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		948FB0A91E4D0489002F0200 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948FB0B11E4D0489002F0200 /* Loper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		948FB0931E4D046D002F0200 = {
+			isa = PBXGroup;
+			children = (
+				948FB0C31E4D06BC002F0200 /* Config */,
+				948FB09F1E4D046E002F0200 /* Loper */,
+				948FB0AD1E4D0489002F0200 /* LoperTests */,
+				948FB09E1E4D046E002F0200 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		948FB09E1E4D046E002F0200 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				948FB09D1E4D046E002F0200 /* Loper.framework */,
+				948FB0AC1E4D0489002F0200 /* LoperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		948FB09F1E4D046E002F0200 /* Loper */ = {
+			isa = PBXGroup;
+			children = (
+				948FB0B81E4D0584002F0200 /* Mutex.swift */,
+				948FB0CA1E4D0C2B002F0200 /* Store.swift */,
+				948FB0D11E4D1103002F0200 /* Database.swift */,
+				948FB0D51E4D1BDC002F0200 /* Query.swift */,
+				948FB0D71E4D2044002F0200 /* Value.swift */,
+				948FB0D91E4D27C1002F0200 /* Normalizer.swift */,
+				948FB0DB1E4D3497002F0200 /* Logger.swift */,
+				948FB0DD1E4D72A9002F0200 /* ResultBuilder.swift */,
+				948FB0CC1E4D0FB4002F0200 /* Errors */,
+				948FB0B71E4D0534002F0200 /* Supporting Files */,
+			);
+			path = Loper;
+			sourceTree = "<group>";
+		};
+		948FB0AD1E4D0489002F0200 /* LoperTests */ = {
+			isa = PBXGroup;
+			children = (
+				948FB0AE1E4D0489002F0200 /* LoperTests.m */,
+				948FB0B01E4D0489002F0200 /* Info.plist */,
+			);
+			path = LoperTests;
+			sourceTree = "<group>";
+		};
+		948FB0B71E4D0534002F0200 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				948FB0BA1E4D0668002F0200 /* sqlite */,
+				948FB0A01E4D046E002F0200 /* Loper.h */,
+				948FB0A11E4D046E002F0200 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		948FB0BA1E4D0668002F0200 /* sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				948FB0BD1E4D0668002F0200 /* sqlite3.c */,
+				948FB0BE1E4D0668002F0200 /* sqlite3.h */,
+			);
+			path = sqlite;
+			sourceTree = "<group>";
+		};
+		948FB0C31E4D06BC002F0200 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				948FB0C41E4D06CF002F0200 /* Project-Base.xcconfig */,
+				948FB0C51E4D06E1002F0200 /* Project-Release.xcconfig */,
+				948FB0C61E4D06EB002F0200 /* Project-Debug.xcconfig */,
+				948FB0C71E4D06F5002F0200 /* Loper-Base.xcconfig */,
+				948FB0C81E4D0700002F0200 /* Loper-Release.xcconfig */,
+				948FB0C91E4D070D002F0200 /* Loper-Debug.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		948FB0CC1E4D0FB4002F0200 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				948FB0CD1E4D0FC2002F0200 /* SQLiteError.swift */,
+				948FB0D31E4D121F002F0200 /* StoreError.swift */,
+			);
+			name = Errors;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		948FB09A1E4D046D002F0200 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948FB0C11E4D0668002F0200 /* sqlite3.h in Headers */,
+				948FB0A21E4D046E002F0200 /* Loper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		948FB09C1E4D046D002F0200 /* Loper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 948FB0A51E4D046E002F0200 /* Build configuration list for PBXNativeTarget "Loper" */;
+			buildPhases = (
+				948FB0981E4D046D002F0200 /* Sources */,
+				948FB0991E4D046D002F0200 /* Frameworks */,
+				948FB09A1E4D046D002F0200 /* Headers */,
+				948FB09B1E4D046D002F0200 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Loper;
+			productName = Loper;
+			productReference = 948FB09D1E4D046E002F0200 /* Loper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		948FB0AB1E4D0489002F0200 /* LoperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 948FB0B41E4D0489002F0200 /* Build configuration list for PBXNativeTarget "LoperTests" */;
+			buildPhases = (
+				948FB0A81E4D0489002F0200 /* Sources */,
+				948FB0A91E4D0489002F0200 /* Frameworks */,
+				948FB0AA1E4D0489002F0200 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				948FB0B31E4D0489002F0200 /* PBXTargetDependency */,
+			);
+			name = LoperTests;
+			productName = LoperTests;
+			productReference = 948FB0AC1E4D0489002F0200 /* LoperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		948FB0941E4D046D002F0200 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Planning Center";
+				TargetAttributes = {
+					948FB09C1E4D046D002F0200 = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					948FB0AB1E4D0489002F0200 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 948FB0971E4D046D002F0200 /* Build configuration list for PBXProject "Loper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 948FB0931E4D046D002F0200;
+			productRefGroup = 948FB09E1E4D046E002F0200 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				948FB09C1E4D046D002F0200 /* Loper */,
+				948FB0AB1E4D0489002F0200 /* LoperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		948FB09B1E4D046D002F0200 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		948FB0AA1E4D0489002F0200 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		948FB0981E4D046D002F0200 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948FB0D41E4D121F002F0200 /* StoreError.swift in Sources */,
+				948FB0D61E4D1BDC002F0200 /* Query.swift in Sources */,
+				948FB0DE1E4D72A9002F0200 /* ResultBuilder.swift in Sources */,
+				948FB0CE1E4D0FC2002F0200 /* SQLiteError.swift in Sources */,
+				948FB0D81E4D2044002F0200 /* Value.swift in Sources */,
+				948FB0CB1E4D0C2B002F0200 /* Store.swift in Sources */,
+				948FB0DC1E4D3497002F0200 /* Logger.swift in Sources */,
+				948FB0B91E4D0584002F0200 /* Mutex.swift in Sources */,
+				948FB0D21E4D1103002F0200 /* Database.swift in Sources */,
+				948FB0DA1E4D27C1002F0200 /* Normalizer.swift in Sources */,
+				948FB0C01E4D0668002F0200 /* sqlite3.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		948FB0A81E4D0489002F0200 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948FB0AF1E4D0489002F0200 /* LoperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		948FB0B31E4D0489002F0200 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 948FB09C1E4D046D002F0200 /* Loper */;
+			targetProxy = 948FB0B21E4D0489002F0200 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		948FB0A31E4D046E002F0200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948FB0C61E4D06EB002F0200 /* Project-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		948FB0A41E4D046E002F0200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948FB0C51E4D06E1002F0200 /* Project-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		948FB0A61E4D046E002F0200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948FB0C91E4D070D002F0200 /* Loper-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		948FB0A71E4D046E002F0200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948FB0C81E4D0700002F0200 /* Loper-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		948FB0B51E4D0489002F0200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LoperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = center.planning.LoperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		948FB0B61E4D0489002F0200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LoperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = center.planning.LoperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		948FB0971E4D046D002F0200 /* Build configuration list for PBXProject "Loper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				948FB0A31E4D046E002F0200 /* Debug */,
+				948FB0A41E4D046E002F0200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		948FB0A51E4D046E002F0200 /* Build configuration list for PBXNativeTarget "Loper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				948FB0A61E4D046E002F0200 /* Debug */,
+				948FB0A71E4D046E002F0200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		948FB0B41E4D0489002F0200 /* Build configuration list for PBXNativeTarget "LoperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				948FB0B51E4D0489002F0200 /* Debug */,
+				948FB0B61E4D0489002F0200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 948FB0941E4D046D002F0200 /* Project object */;
+}

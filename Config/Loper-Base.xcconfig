@@ -1,0 +1,51 @@
+//
+//  Loper-Base.xcconfig
+//  Loper
+//
+//  Created by Skylar Schipper on 2/9/17.
+//  Copyright (c) 2017 Planning Center
+//
+
+///
+///
+///
+INSTALL_PATH = $(LOCAL_LIBRARY_DIR)/Frameworks
+SKIP_INSTALL = YES
+
+///
+///
+///
+DYLIB_COMPATIBILITY_VERSION = 1
+DYLIB_CURRENT_VERSION = 1
+DYLIB_INSTALL_NAME_BASE = @rpath
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+
+///
+///
+///
+DEFINES_MODULE = YES
+INFOPLIST_FILE = Loper/Info.plist
+PRODUCT_BUNDLE_IDENTIFIER = center.planning.Loper
+PRODUCT_NAME = $(TARGET_NAME)
+
+///
+///
+///
+APPLICATION_EXTENSION_API_ONLY = YES
+
+///
+///
+///
+CODE_SIGN_IDENTITY =
+
+///
+///
+///
+CLANG_ENABLE_MODULES = YES
+
+///
+///
+///
+SWIFT_VERSION = 3.0
+SWIFT_INCLUDE_PATHS = $(SRCROOT)/Loper/sqlite/
+
