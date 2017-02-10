@@ -22,6 +22,7 @@
 		948FB0DA1E4D27C1002F0200 /* Normalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0D91E4D27C1002F0200 /* Normalizer.swift */; };
 		948FB0DC1E4D3497002F0200 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0DB1E4D3497002F0200 /* Logger.swift */; };
 		948FB0DE1E4D72A9002F0200 /* ResultBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0DD1E4D72A9002F0200 /* ResultBuilder.swift */; };
+		94EE0B011E4E6DDC00CF40F0 /* EncodedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE0B001E4E6DDC00CF40F0 /* EncodedObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		948FB0D91E4D27C1002F0200 /* Normalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Normalizer.swift; sourceTree = "<group>"; };
 		948FB0DB1E4D3497002F0200 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		948FB0DD1E4D72A9002F0200 /* ResultBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultBuilder.swift; sourceTree = "<group>"; };
+		94EE0B001E4E6DDC00CF40F0 /* EncodedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodedObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				948FB0B81E4D0584002F0200 /* Mutex.swift */,
 				948FB0CA1E4D0C2B002F0200 /* Store.swift */,
+				94EE0B001E4E6DDC00CF40F0 /* EncodedObject.swift */,
 				948FB0D11E4D1103002F0200 /* Database.swift */,
 				948FB0D51E4D1BDC002F0200 /* Query.swift */,
 				948FB0D71E4D2044002F0200 /* Value.swift */,
@@ -280,6 +283,7 @@
 				948FB0D41E4D121F002F0200 /* StoreError.swift in Sources */,
 				948FB0D61E4D1BDC002F0200 /* Query.swift in Sources */,
 				948FB0DE1E4D72A9002F0200 /* ResultBuilder.swift in Sources */,
+				94EE0B011E4E6DDC00CF40F0 /* EncodedObject.swift in Sources */,
 				948FB0CE1E4D0FC2002F0200 /* SQLiteError.swift in Sources */,
 				948FB0D81E4D2044002F0200 /* Value.swift in Sources */,
 				948FB0CB1E4D0C2B002F0200 /* Store.swift in Sources */,
@@ -379,6 +383,7 @@
 				948FB0A71E4D046E002F0200 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		948FB0B41E4D0489002F0200 /* Build configuration list for PBXNativeTarget "LoperTests" */ = {
 			isa = XCConfigurationList;
@@ -387,6 +392,7 @@
 				948FB0B61E4D0489002F0200 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

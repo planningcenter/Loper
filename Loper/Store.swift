@@ -139,6 +139,22 @@ public final class Store : NSObject {
         try self.set(.double(value), key, scope)
     }
 
+    /// Encodes an object conforming to NSCoding into the key store
+    ///
+    /// - Parameters:
+    ///   - value: The value to encode
+    ///   - key: The key to store the value
+    ///   - scope: The scope the key belongs to
+    @objc(setObject:forKey:inScope:error:)
+    public func set(object value: NSCoding, forKey key: String, inScope scope: String?) throws {
+        let enc = EncodedObject(object: value)
+        let data = NSMutableData()
+        let archiver = NSKeyedArchiver(forWritingWith: data)
+        archiver.encode(enc, forKey: "__enc")
+        archiver.finishEncoding()
+        try self.set(.data(data as Data), key, scope)
+    }
+
     // MARK: - Reading
 
     /// Read a stored string value
@@ -197,6 +213,24 @@ public final class Store : NSObject {
             return 0.0
         }
         return object[ValueType.double.columnName] as? Double ?? 0.0
+    }
+
+    /// Reads a NSCoding encoded object out of the database.
+    ///
+    /// - Parameters:
+    ///   - key: The key the value is stored for
+    ///   - scope: The scope the key belongs to
+    /// - Returns: A decoded object.  If the object wasn't stored with `set(object:forKey:inScope:)` the decode will fail
+    @objc(readEncodedObjectForKey:inScope:)
+    public func read(encodedObjectForKey key: String, inScope scope: String?) -> AnyObject? {
+        guard let data = self.read(dataForKey: key, inScope: scope) else {
+            return nil
+        }
+        let unarchive = NSKeyedUnarchiver(forReadingWith: data)
+        guard let encoded = unarchive.decodeObject(forKey: "__enc") as? EncodedObject else {
+            return nil
+        }
+        return encoded.object
     }
 
     /// Does a value exist in the store for the passed key
@@ -381,8 +415,10 @@ public extension Store {
             try? self.set(integer: (object as! Int64), forKey: key, inScope: scope)
         case is Double:
             try? self.set(double: (object as! Double), forKey: key, inScope: scope)
+        case is NSCoding:
+            try? self.set(object: (object as! NSCoding), forKey: key, inScope: scope)
         default:
-            assert(false, "Invalid type passed \(object).  Valid types are String, Data, Int64, Double")
+            assert(false, "Invalid type passed \(object).  Valid types are String, Data, Int64, Double or NSCoding")
         }
     }
 
@@ -404,5 +440,10 @@ public extension Store {
     @objc(doubleForKey:inScope:)
     public func double(forKey key: String, inScope scope: String?) -> Double {
         return self.read(doubleForKey: key, inScope: scope)
+    }
+
+    @objc(encodedObjectForKey:inScope:)
+    public func encodedObject(forKey key: String, inScope scope: String?) -> AnyObject? {
+        return self.read(encodedObjectForKey: key, inScope: scope)
     }
 }

@@ -153,4 +153,11 @@
     XCTAssertTrue([[LOPStore defaultStore] hasValueForKey:@"value_setting" inScope:nil]);
 }
 
+- (void)testWritingCodingObjects {
+    [[LOPStore defaultStore] setObject:@{@"foo": @"bar"} forKey:@"test_encoded_object" inScope:nil];
+    NSDictionary *output = [[LOPStore defaultStore] encodedObjectForKey:@"test_encoded_object" inScope:nil];
+    XCTAssertTrue([output isKindOfClass:[NSDictionary class]]);
+    XCTAssertEqualObjects(output, @{@"foo": @"bar"});
+}
+
 @end
