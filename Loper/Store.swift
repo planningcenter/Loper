@@ -422,6 +422,11 @@ public extension Store {
         }
     }
 
+    @objc(setBool:forKey:inScope:)
+    public func set(bool: Bool, forKey key: String, inScope scope: String?) {
+        try? self.set(integer: (bool) ? 1 : 0, forKey: key, inScope: scope)
+    }
+
     @objc(stringForKey:inScope:)
     public func string(forKey key: String, inScope scope: String?) -> String? {
         return self.read(stringForKey: key, inScope: scope)
@@ -445,5 +450,10 @@ public extension Store {
     @objc(encodedObjectForKey:inScope:)
     public func encodedObject(forKey key: String, inScope scope: String?) -> AnyObject? {
         return self.read(encodedObjectForKey: key, inScope: scope)
+    }
+
+    @objc(boolForKey:inScope:)
+    public func bool(forKey key: String, inScope scope: String?) -> Bool {
+        return self.read(integerForKey: key, inScope: scope) == 1
     }
 }
