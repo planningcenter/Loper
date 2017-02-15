@@ -26,7 +26,7 @@ public final class Store : NSObject {
 
     let persistent: Bool
 
-    internal let mutex = Mutex(type: .normal)
+    internal let mutex = Mutex(type: .recursive)
 
     internal var database: Database?
 
@@ -41,6 +41,16 @@ public final class Store : NSObject {
         return self.database?.isOpen ?? false
     }
 
+    private func databasePath() throws -> String {
+        guard self.persistent else {
+            return ":memory:"
+        }
+        guard let support = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first else {
+            throw StoreError(.missingPath, "Can't find application support directory")
+        }
+        return support.appending("/loper-1.sqlite")
+    }
+
 
     /// Opens the KeyStore and sets up the the database
     public func open() throws {
@@ -49,16 +59,7 @@ public final class Store : NSObject {
                 return
             }
 
-            var path: String = ":memory:"
-            if self.persistent {
-                guard let support = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first else {
-                    throw StoreError(.missingPath, "Can't find application support directory")
-                }
-                path = support.appending("/loper-1.sqlite")
-            }
-
-            print(path)
-
+            let path = try self.databasePath()
             let db = Database(path: path)
             try db.open()
             self.database = db
@@ -123,7 +124,7 @@ public final class Store : NSObject {
     ///   - value: The value to write
     ///   - key: The key to store the value
     ///   - scope: The scope the key belongs to
-    @objc(setInt:forKey:inScope:error:)
+    @objc(setInteger:forKey:inScope:error:)
     public func set(integer value: Int64, forKey key: String, inScope scope: String?) throws {
         try self.set(.integer(value), key, scope)
     }
@@ -399,6 +400,24 @@ public final class Store : NSObject {
             }
             let query = Query("VACUUM;")
             try db.execute(update: query)
+        }
+    }
+
+    /// Hard resets the database
+    ///
+    /// If the store is already open, this will re-open after hard deleting
+    public func hardReset() throws {
+        // Mutex is recursive so we can call these locking function in the mutex
+        try self.mutex.synchronized {
+            let reopen = self.isOpen
+            try self.close()
+            if self.persistent {
+                let path = try self.databasePath()
+                try FileManager.default.removeItem(atPath: path)
+            }
+            if reopen {
+                try self.open()
+            }
         }
     }
 }

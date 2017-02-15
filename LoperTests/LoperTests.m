@@ -47,7 +47,7 @@
 
 - (void)testSettingInt {
     NSError *error = nil;
-    XCTAssertTrue([[LOPStore defaultStore] setInt:1 forKey:@"test_i" inScope:nil error:&error]);
+    XCTAssertTrue([[LOPStore defaultStore] setInteger:1 forKey:@"test_i" inScope:nil error:&error]);
     XCTAssertNil(error);
 }
 
@@ -80,7 +80,7 @@
 
 - (void)testReadingInt {
     NSError *error = nil;
-    XCTAssertTrue([[LOPStore defaultStore] setInt:43 forKey:@"test_read_i" inScope:nil error:&error]);
+    XCTAssertTrue([[LOPStore defaultStore] setInteger:43 forKey:@"test_read_i" inScope:nil error:&error]);
     XCTAssertNil(error);
 
     int64_t value = [[LOPStore defaultStore] readIntegerForKey:@"test_read_i" inScope:nil];
@@ -158,6 +158,21 @@
     NSDictionary *output = [[LOPStore defaultStore] encodedObjectForKey:@"test_encoded_object" inScope:nil];
     XCTAssertTrue([output isKindOfClass:[NSDictionary class]]);
     XCTAssertEqualObjects(output, @{@"foo": @"bar"});
+}
+
+- (void)testHardDeleteOfDB {
+    NSError *error = nil;
+    XCTAssertTrue([[LOPStore defaultStore] setString:@"Hard Reset" forKey:@"hard_reset" inScope:@"reset_scope" error:&error]);
+    XCTAssertNil(error);
+
+    XCTAssertTrue([[LOPStore defaultStore] hardResetAndReturnError:&error]);
+    XCTAssertNil(error);
+
+    XCTAssertNil([[LOPStore defaultStore] stringForKey:@"hard_reset" inScope:@"reset_scope"]);
+
+    // Sanity check for writable
+    XCTAssertTrue([[LOPStore defaultStore] setString:@"Hard Reset" forKey:@"hard_reset" inScope:@"reset_scope" error:&error]);
+    XCTAssertNil(error);
 }
 
 @end
