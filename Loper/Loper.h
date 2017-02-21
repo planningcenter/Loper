@@ -6,4 +6,4 @@
 //  Copyright (c) 2017 Planning Center
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
