@@ -62,8 +62,7 @@ internal class ResultBuilder {
         guard let buffer = sqlite3_column_name(self.stmt, column) else {
             throw StoreError(.unknownColumnName)
         }
-        let str = unsafeBitCast(buffer, to: UnsafePointer<CChar>.self)
-        guard let name = String(utf8String: str) else {
+        guard let name = String(utf8String: buffer) else {
             throw StoreError(.unknownColumnFmt)
         }
         return name
@@ -83,18 +82,14 @@ internal class ResultBuilder {
             guard let buffer = sqlite3_column_blob(self.stmt, column) else {
                 throw StoreError(.blobReadFailure)
             }
-            let voidBuffer = unsafeBitCast(buffer, to: UnsafePointer<UInt8>.self)
+            let voidBuffer = buffer.assumingMemoryBound(to: UInt8.self)
             let length = sqlite3_column_bytes(self.stmt, column)
             return Data(bytes: voidBuffer, count: Int(length))
         case SQLITE_TEXT:
             guard let raw = sqlite3_column_text(self.stmt, column) else {
                 throw StoreError(.stringReadFailure)
             }
-            let cStr = unsafeBitCast(raw, to: UnsafePointer<CChar>.self)
-            guard let string = String(utf8String: cStr) else {
-                throw StoreError(.stringConvertFailure)
-            }
-            return string
+            return String(cString: raw)
         default:
             throw StoreError(.unknownType)
         }
