@@ -9,6 +9,35 @@
 import Foundation
 import sqlite3
 
+internal class Statement {
+    let stmt: OpaquePointer
+
+    private let pointer: UnsafeMutablePointer<OpaquePointer?>
+
+    init(_ db: OpaquePointer, _ sql: String) throws {
+        let pointer: UnsafeMutablePointer<OpaquePointer?> = UnsafeMutablePointer.allocate(capacity: MemoryLayout<OpaquePointer>.size)
+        let status = sqlite3_prepare(db, sql, -1, pointer, nil)
+
+        try SQLiteError.check(status: status, db: db) {
+            pointer.deallocate(capacity: MemoryLayout<OpaquePointer>.size)
+            sqlite3_finalize(pointer.pointee)
+        }
+
+        guard let stmt = pointer.pointee else {
+            pointer.deallocate(capacity: MemoryLayout<OpaquePointer>.size)
+            sqlite3_finalize(pointer.pointee)
+            throw StoreError(.statementFailed)
+        }
+
+        self.pointer = pointer
+        self.stmt = stmt
+    }
+
+    deinit {
+        self.pointer.deallocate(capacity: MemoryLayout<OpaquePointer>.size)
+    }
+}
+
 internal struct Query {
     let sql: String
     let args: [Value]
@@ -18,35 +47,26 @@ internal struct Query {
         self.args = args ?? []
     }
 
-    func statement(forDB db: OpaquePointer) throws -> OpaquePointer {
-        let wrapper: UnsafeMutablePointer<OpaquePointer?> = UnsafeMutablePointer.allocate(capacity: MemoryLayout<OpaquePointer>.size)
-        let status = sqlite3_prepare(db, self.sql, -1, wrapper, nil)
+    func statement(forDB db: OpaquePointer) throws -> Statement {
+        let statement = try Statement(db, self.sql)
 
-        try SQLiteError.check(status: status, db: db) {
-            sqlite3_finalize(wrapper.pointee)
-        }
-
-        guard let stmt = wrapper.pointee else {
-            throw StoreError(.statementFailed)
-        }
-
-        let count = Int(sqlite3_bind_parameter_count(stmt))
+        let count = Int(sqlite3_bind_parameter_count(statement.stmt))
 
         guard self.args.count == count else {
-            sqlite3_finalize(stmt)
+            sqlite3_finalize(statement.stmt)
             throw StoreError(.argCountMismatch)
         }
 
         for i in 0..<count {
             let value = self.args[i]
             do {
-                try value.bind(toColumn: i + 1, inStatement: stmt)
+                try value.bind(toColumn: i + 1, inStatement: statement.stmt)
             } catch let e {
-                sqlite3_finalize(stmt)
+                sqlite3_finalize(statement.stmt)
                 throw e
             }
         }
 
-        return stmt
+        return statement
     }
 }

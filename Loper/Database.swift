@@ -67,15 +67,15 @@ internal class Database {
             guard let db = self.db else {
                 throw StoreError(.unopened)
             }
-            let stmt = try update.statement(forDB: db)
+            let statement = try update.statement(forDB: db)
             DebugLog("Running (update): \(update.sql)")
 
-            let status = sqlite3_step(stmt)
+            let status = sqlite3_step(statement.stmt)
             if status == SQLITE_ROW {
                 fatalError("Can't execute an update with a query \(update.sql)")
             }
 
-            if sqlite3_finalize(stmt) != SQLITE_OK {
+            if sqlite3_finalize(statement.stmt) != SQLITE_OK {
                 print("Failed to finalize statement for update")
             }
 
@@ -88,10 +88,10 @@ internal class Database {
             guard let db = self.db else {
                 throw StoreError(.unopened)
             }
-            let stmt = try query.statement(forDB: db)
+            let statement = try query.statement(forDB: db)
             DebugLog("Running (query): \(query.sql)")
 
-            let builder = ResultBuilder(stmt, query: query)
+            let builder = ResultBuilder(statement.stmt, query: query)
             
             return try builder.results()
         }
