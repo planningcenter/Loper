@@ -32,7 +32,7 @@ public struct SQLiteError : CustomNSError {
         ]
     }
 
-    internal static func check(status: Int32, db: OpaquePointer? = nil, values: Set<Int32> = [SQLITE_OK, SQLITE_ROW, SQLITE_DONE], handler: ((Void) -> (Void))? = nil) throws {
+    internal static func check(status: Int32, db: OpaquePointer? = nil, values: Set<Int32> = [SQLITE_OK, SQLITE_ROW, SQLITE_DONE], handler: (() -> (Void))? = nil) throws {
         guard !values.contains(status) else {
             return
         }

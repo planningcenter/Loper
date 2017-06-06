@@ -329,7 +329,7 @@ public final class Store : NSObject {
         }
     }
 
-    private func inTransaction(_ db: Database, _ block: (Void) throws -> (Void)) throws {
+    private func inTransaction(_ db: Database, _ block: () throws -> (Void)) throws {
         try db.execute(update: Query("BEGIN TRANSACTION;"));
         do {
             try block()
