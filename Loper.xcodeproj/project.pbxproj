@@ -11,7 +11,7 @@
 		948FB0AF1E4D0489002F0200 /* LoperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0AE1E4D0489002F0200 /* LoperTests.m */; };
 		948FB0B11E4D0489002F0200 /* Loper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948FB09D1E4D046E002F0200 /* Loper.framework */; };
 		948FB0B91E4D0584002F0200 /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0B81E4D0584002F0200 /* Mutex.swift */; };
-		948FB0C01E4D0668002F0200 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0BD1E4D0668002F0200 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations -Wno-unreachable-code -Wno-ambiguous-macro -Wno-conversion "; }; };
+		948FB0C01E4D0668002F0200 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0BD1E4D0668002F0200 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations -Wno-unreachable-code -Wno-ambiguous-macro -Wno-conversion -Wno-comma"; }; };
 		948FB0C11E4D0668002F0200 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 948FB0BE1E4D0668002F0200 /* sqlite3.h */; };
 		948FB0CB1E4D0C2B002F0200 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0CA1E4D0C2B002F0200 /* Store.swift */; };
 		948FB0CE1E4D0FC2002F0200 /* SQLiteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0CD1E4D0FC2002F0200 /* SQLiteError.swift */; };
@@ -231,7 +231,7 @@
 				TargetAttributes = {
 					948FB09C1E4D046D002F0200 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					948FB0AB1E4D0489002F0200 = {
