@@ -26,7 +26,7 @@ public final class Store : NSObject {
 
     let persistent: Bool
 
-    internal let mutex = Mutex(type: .recursive)
+    internal let queue = DispatchQueue(label: "center.planning.LoperStore", qos: .userInteractive)
 
     internal var database: Database?
 
@@ -34,7 +34,7 @@ public final class Store : NSObject {
 
     /// Has the database been opened and it's currently ready to be written to
     public var isOpen: Bool {
-        return self.mutex.synchronized { self._open }
+        return self.queue.sync { self._open }
     }
 
     internal var _open: Bool {
@@ -54,7 +54,7 @@ public final class Store : NSObject {
 
     /// Opens the KeyStore and sets up the the database
     public func open() throws {
-        try self.mutex.synchronized {
+        try self.queue.sync {
             if self._open {
                 return
             }
@@ -89,7 +89,7 @@ public final class Store : NSObject {
 
     /// Close the open database handle and teardown assets.
     public func close() throws {
-        try self.mutex.synchronized {
+        try self.queue.sync {
             try self.database?.close()
         }
     }
@@ -242,7 +242,7 @@ public final class Store : NSObject {
     /// - Returns: A Bool indicating if a value exists in the store for the key/value
     @objc(hasValueForKey:inScope:)
     public func hasValue(forKey key: String, inScope scope: String?) -> Bool {
-        return self.mutex.synchronized {
+        return self.queue.sync {
             guard let db = self.database else {
                 return false
             }
@@ -270,7 +270,7 @@ public final class Store : NSObject {
     }
 
     private func read(_ type: ValueType, _ key: String, _ scope: String?) throws -> [String: Any] {
-        return try self.mutex.synchronized {
+        return try self.queue.sync {
             guard let db = self.database else {
                 throw StoreError(.unopened)
             }
@@ -292,13 +292,13 @@ public final class Store : NSObject {
                 throw StoreError(.invalidID)
             }
 
-            do {
+            self.queue.async {
                 let args: [Value] = [
                     .double(Date().timeIntervalSince1970),
                     .integer(id)
                 ]
                 let query = Query("UPDATE `\(self.tableName)` SET `last_read_at` = ? WHERE `id` = ?", args)
-                try db.execute(update: query)
+                try? db.execute(update: query)
             }
 
             return result
@@ -307,7 +307,7 @@ public final class Store : NSObject {
 
     // MARK: - Private Setter
     private func set(_ val: Value, _ key: String, _ scope: String?) throws {
-        try self.mutex.synchronized {
+        try self.queue.sync {
             guard let db = self.database else {
                 throw StoreError(.unopened)
             }
@@ -344,7 +344,7 @@ public final class Store : NSObject {
     /// Delete all keys in the scope.
     @objc(deleteScope:error:)
     public func delete(scope: String) throws {
-        try self.mutex.synchronized {
+        try self.queue.sync {
             guard let db = self.database else {
                 throw StoreError(.unopened)
             }
@@ -359,7 +359,7 @@ public final class Store : NSObject {
     ///
     /// Still need to run `cleanup()` to reclaim storage space in the database file.
     public func deleteAll() throws {
-        try self.mutex.synchronized {
+        try self.queue.sync {
             guard let db = self.database else {
                 throw StoreError(.unopened)
             }
@@ -375,7 +375,7 @@ public final class Store : NSObject {
     ///   - scope: The scope the key belongs to
     @objc(deleteValueForKey:inScope:error:)
     public func deleteValue(forKey key: String, inScope scope: String?) throws {
-        try self.mutex.synchronized {
+        try self.queue.sync {
             guard let db = self.database else {
                 throw StoreError(.unopened)
             }
@@ -394,7 +394,7 @@ public final class Store : NSObject {
     ///
     /// See the docs on https://sqlite.org/lang_vacuum.html
     public func cleanup() throws {
-        try self.mutex.synchronized {
+        try self.queue.sync {
             guard let db = self.database else {
                 throw StoreError(.unopened)
             }
@@ -408,8 +408,8 @@ public final class Store : NSObject {
     /// If the store is already open, this will re-open after hard deleting
     public func hardReset() throws {
         // Mutex is recursive so we can call these locking function in the mutex
-        try self.mutex.synchronized {
-            let reopen = self.isOpen
+        try self.queue.sync {
+            let reopen = self._open
             try self.close()
             if self.persistent {
                 let path = try self.databasePath()

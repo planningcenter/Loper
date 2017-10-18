@@ -12,7 +12,7 @@ import sqlite3
 internal class Database {
     let path: String
 
-    let state = Mutex(type: .recursive)
+    let state = Mutex()
 
     init(path: String) {
         self.path = path
