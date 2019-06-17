@@ -19,12 +19,12 @@ internal class Statement {
         let status = sqlite3_prepare(db, sql, -1, pointer, nil)
 
         try SQLiteError.check(status: status, db: db) {
-            pointer.deallocate(capacity: MemoryLayout<OpaquePointer>.size)
+            pointer.deallocate()
             sqlite3_finalize(pointer.pointee)
         }
 
         guard let stmt = pointer.pointee else {
-            pointer.deallocate(capacity: MemoryLayout<OpaquePointer>.size)
+            pointer.deallocate()
             sqlite3_finalize(pointer.pointee)
             throw StoreError(.statementFailed)
         }
@@ -34,7 +34,7 @@ internal class Statement {
     }
 
     deinit {
-        self.pointer.deallocate(capacity: MemoryLayout<OpaquePointer>.size)
+        self.pointer.deallocate()
     }
 }
 

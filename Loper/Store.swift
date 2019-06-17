@@ -53,7 +53,7 @@ public final class Store : NSObject {
 
 
     /// Opens the KeyStore and sets up the the database
-    public func open() throws {
+    @objc public func open() throws {
         try self.queue.sync {
             if self._open {
                 return
@@ -88,7 +88,7 @@ public final class Store : NSObject {
     }
 
     /// Close the open database handle and teardown assets.
-    public func close() throws {
+    @objc public func close() throws {
         try self.queue.sync {
             try self.database?.close()
         }
