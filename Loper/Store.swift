@@ -393,7 +393,7 @@ public final class Store : NSObject {
     /// Running cleanup rebuilds the database file, repacking it into a minimal amount of disk space.
     ///
     /// See the docs on https://sqlite.org/lang_vacuum.html
-    public func cleanup() throws {
+    @objc public func cleanup() throws {
         try self.queue.sync {
             guard let db = self.database else {
                 throw StoreError(.unopened)

@@ -226,7 +226,7 @@
 		948FB0941E4D046D002F0200 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Planning Center";
 				TargetAttributes = {
 					948FB09C1E4D046D002F0200 = {
@@ -318,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 948FB0C61E4D06EB002F0200 /* Project-Debug.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 			};
 			name = Debug;
 		};
@@ -325,6 +326,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 948FB0C51E4D06E1002F0200 /* Project-Release.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
