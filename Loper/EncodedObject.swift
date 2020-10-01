@@ -9,7 +9,7 @@
 import Foundation
 
 internal final class EncodedObject : NSObject, NSSecureCoding {
-    let object: NSCoding
+    let object: NSSecureCoding
 
     static var supportsSecureCoding: Bool {
         return true
@@ -29,16 +29,15 @@ internal final class EncodedObject : NSObject, NSSecureCoding {
         guard let expected = NSClassFromString(klass) else {
             return nil
         }
-        guard let object = aDecoder.decodeObject(forKey: "__object") as? NSCoding else {
+
+        guard let object = aDecoder.decodeObject(of: [expected], forKey: "__object") as? NSSecureCoding else {
             return nil
         }
-        guard expected == type(of: object) else {
-            return nil;
-        }
+
         self.object = object
     }
 
-    init(object: NSCoding) {
+    init(object: NSSecureCoding) {
         self.object = object
     }
 }
