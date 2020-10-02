@@ -231,7 +231,7 @@
 				TargetAttributes = {
 					948FB09C1E4D046D002F0200 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
 					948FB0AB1E4D0489002F0200 = {
@@ -242,10 +242,11 @@
 			};
 			buildConfigurationList = 948FB0971E4D046D002F0200 /* Build configuration list for PBXProject "Loper" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 948FB0931E4D046D002F0200;
 			productRefGroup = 948FB09E1E4D046E002F0200 /* Products */;
@@ -335,8 +336,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 948FB0C91E4D070D002F0200 /* Loper-Debug.xcconfig */;
 			buildSettings = {
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -344,8 +344,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 948FB0C81E4D0700002F0200 /* Loper-Release.xcconfig */;
 			buildSettings = {
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

@@ -33,7 +33,7 @@ public final class Store : NSObject {
     private let tableName = "store_1"
 
     /// Has the database been opened and it's currently ready to be written to
-    public var isOpen: Bool {
+    @objc var isOpen: Bool {
         return self.queue.sync { self._open }
     }
 
@@ -140,14 +140,14 @@ public final class Store : NSObject {
         try self.set(.double(value), key, scope)
     }
 
-    /// Encodes an object conforming to NSCoding into the key store
+    /// Encodes an object conforming to NSSecureCoding into the key store
     ///
     /// - Parameters:
     ///   - value: The value to encode
     ///   - key: The key to store the value
     ///   - scope: The scope the key belongs to
     @objc(setObject:forKey:inScope:error:)
-    public func set(object value: NSCoding, forKey key: String, inScope scope: String?) throws {
+    public func set(object value: NSSecureCoding, forKey key: String, inScope scope: String?) throws {
         let enc = EncodedObject(object: value)
         let data = NSMutableData()
         let archiver = NSKeyedArchiver(forWritingWith: data)
@@ -216,7 +216,7 @@ public final class Store : NSObject {
         return object[ValueType.double.columnName] as? Double ?? 0.0
     }
 
-    /// Reads a NSCoding encoded object out of the database.
+    /// Reads a NSSecureCoding encoded object out of the database.
     ///
     /// - Parameters:
     ///   - key: The key the value is stored for
@@ -228,7 +228,7 @@ public final class Store : NSObject {
             return nil
         }
         let unarchive = NSKeyedUnarchiver(forReadingWith: data)
-        guard let encoded = unarchive.decodeObject(forKey: "__enc") as? EncodedObject else {
+        guard let encoded = unarchive.decodeObject(of: EncodedObject.self, forKey: "__enc") else {
             return nil
         }
         return encoded.object
@@ -358,7 +358,7 @@ public final class Store : NSObject {
     /// Delete's all the values in the store.
     ///
     /// Still need to run `cleanup()` to reclaim storage space in the database file.
-    public func deleteAll() throws {
+    @objc func deleteAll() throws {
         try self.queue.sync {
             guard let db = self.database else {
                 throw StoreError(.unopened)
@@ -406,73 +406,71 @@ public final class Store : NSObject {
     /// Hard resets the database
     ///
     /// If the store is already open, this will re-open after hard deleting
-    public func hardReset() throws {
-        // Mutex is recursive so we can call these locking function in the mutex
-        try self.queue.sync {
-            let reopen = self._open
-            try self.close()
-            if self.persistent {
-                let path = try self.databasePath()
-                try FileManager.default.removeItem(atPath: path)
-            }
-            if reopen {
-                try self.open()
-            }
+    @objc func hardReset() throws {
+
+        let reopen = self._open
+        try self.close()
+        if self.persistent {
+            let path = try self.databasePath()
+            try FileManager.default.removeItem(atPath: path)
+        }
+        if reopen {
+            try self.open()
         }
     }
 }
 
 public extension Store {
     @objc(setObject:forKey:inScope:)
-    public func set(object: AnyObject, forKey key: String, inScope scope: String?) {
+    func set(object: AnyObject, forKey key: String, inScope scope: String?) {
         switch object {
-        case is String:
-            try? self.set(string: (object as! String), forKey: key, inScope: scope)
-        case is Data:
-            try? self.set(data: (object as! Data), forKey: key, inScope: scope)
-        case is Int64:
-            try? self.set(integer: (object as! Int64), forKey: key, inScope: scope)
-        case is Double:
-            try? self.set(double: (object as! Double), forKey: key, inScope: scope)
-        case is NSCoding:
-            try? self.set(object: (object as! NSCoding), forKey: key, inScope: scope)
-        default:
-            assert(false, "Invalid type passed \(object).  Valid types are String, Data, Int64, Double or NSCoding")
+            case is String:
+                try? self.set(string: (object as! String), forKey: key, inScope: scope)
+            case is Data:
+                try? self.set(data: (object as! Data), forKey: key, inScope: scope)
+            case is Int64:
+                try? self.set(integer: (object as! Int64), forKey: key, inScope: scope)
+            case is Double:
+                try? self.set(double: (object as! Double), forKey: key, inScope: scope)
+            case is NSSecureCoding:
+                try? self.set(object: (object as! NSSecureCoding), forKey: key, inScope: scope)
+            default:
+                assert(false, "Invalid type passed \(object).  Valid types are String, Data, Int64, Double or NSSecureCoding")
         }
     }
 
     @objc(setBool:forKey:inScope:)
-    public func set(bool: Bool, forKey key: String, inScope scope: String?) {
+    func set(bool: Bool, forKey key: String, inScope scope: String?) {
         try? self.set(integer: (bool) ? 1 : 0, forKey: key, inScope: scope)
     }
 
     @objc(stringForKey:inScope:)
-    public func string(forKey key: String, inScope scope: String?) -> String? {
+    func string(forKey key: String, inScope scope: String?) -> String? {
         return self.read(stringForKey: key, inScope: scope)
     }
 
     @objc(dataForKey:inScope:)
-    public func data(forKey key: String, inScope scope: String?) -> Data? {
+    func data(forKey key: String, inScope scope: String?) -> Data? {
         return self.read(dataForKey: key, inScope: scope)
     }
 
     @objc(integerForKey:inScope:)
-    public func integer(forKey key: String, inScope scope: String?) -> Int64 {
+    func integer(forKey key: String, inScope scope: String?) -> Int64 {
         return self.read(integerForKey: key, inScope: scope)
     }
 
     @objc(doubleForKey:inScope:)
-    public func double(forKey key: String, inScope scope: String?) -> Double {
+    func double(forKey key: String, inScope scope: String?) -> Double {
         return self.read(doubleForKey: key, inScope: scope)
     }
 
     @objc(encodedObjectForKey:inScope:)
-    public func encodedObject(forKey key: String, inScope scope: String?) -> AnyObject? {
+    func encodedObject(forKey key: String, inScope scope: String?) -> AnyObject? {
         return self.read(encodedObjectForKey: key, inScope: scope)
     }
 
     @objc(boolForKey:inScope:)
-    public func bool(forKey key: String, inScope scope: String?) -> Bool {
+    func bool(forKey key: String, inScope scope: String?) -> Bool {
         return self.read(integerForKey: key, inScope: scope) == 1
     }
 }
