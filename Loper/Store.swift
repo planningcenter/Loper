@@ -33,7 +33,7 @@ public final class Store : NSObject {
     private let tableName = "store_1"
 
     /// Has the database been opened and it's currently ready to be written to
-    @objc var isOpen: Bool {
+    @objc public var isOpen: Bool {
         return self.queue.sync { self._open }
     }
 
