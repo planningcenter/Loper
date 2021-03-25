@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		248474C9879A4F7C55BDA0C2D17C2608 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 23F234EBC40E824DE38F334B2C258995 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7B28E0A4276BD801B99AE0DF01357936 /* Pods-Loper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F52678974A55B3D584FB01CCC0F659 /* Pods-Loper-dummy.m */; };
+		8C031BD9EA20466CCE957B72CA9F4BE0 /* Pods-Loper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 011ED96856D7958B72B56FF83F296CFA /* Pods-Loper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94599DB4D3A8CD08A4BFE10B71054F33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A306D6AF1C6D7C9DB8F042359F9BA16D /* sqlite3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D063B00D505DF941A23068B6862F9A00 /* sqlite3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B13B77EAADDA54AD0BB232FD0009B563 /* Pods-Loper-LoperTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B4F43531DDA6660F55FFC13770F3C3 /* Pods-Loper-LoperTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9332E043F031961EB6F0CED6ED162CA /* sqlite3ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 338BCFDD8863A541E9EE854F82770238 /* sqlite3ext.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BADD707BAC8038030C2F6CDCD10DDF94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C9C455B855A39E7D6573DAF97B21B874 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CE322608A75C2DAEFB86DFBF5B05A3CC /* Pods-Loper-LoperTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F589FA7747B1EEDAE1D57075F1EB917D /* Pods-Loper-LoperTests-dummy.m */; };
+		ED3AB36A0EB83AA15124D638B0FEE9AB /* sqlite3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4417A1764BADD296AD9159098699B0ED /* sqlite3-dummy.m */; };
+		F9958EB3FE2D015864EE441A5F2A49FC /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 2362DC453D373EEBA237271EF0AABEFF /* sqlite3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D9A8F9F0A88E71787AE739AD6CFC5E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7578477CA77D98D8282C395822C4A93C;
+			remoteInfo = sqlite3;
+		};
+		C03129BCCD1B262EEA3256464080B9A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7578477CA77D98D8282C395822C4A93C;
+			remoteInfo = sqlite3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		011ED96856D7958B72B56FF83F296CFA /* Pods-Loper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Loper-umbrella.h"; sourceTree = "<group>"; };
+		09B4F43531DDA6660F55FFC13770F3C3 /* Pods-Loper-LoperTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Loper-LoperTests-umbrella.h"; sourceTree = "<group>"; };
+		146D9802AA6C9826AA8887270FE48A7D /* Pods-Loper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loper-Info.plist"; sourceTree = "<group>"; };
+		173ED4A3C0C754C741FB02F0391A3EA9 /* Pods-Loper-LoperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loper-LoperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		18F52678974A55B3D584FB01CCC0F659 /* Pods-Loper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Loper-dummy.m"; sourceTree = "<group>"; };
+		2362DC453D373EEBA237271EF0AABEFF /* sqlite3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = "sqlite-amalgamation-3350200/sqlite3.h"; sourceTree = "<group>"; };
+		23F234EBC40E824DE38F334B2C258995 /* sqlite3.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sqlite3.c; path = "sqlite-amalgamation-3350200/sqlite3.c"; sourceTree = "<group>"; };
+		338BCFDD8863A541E9EE854F82770238 /* sqlite3ext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sqlite3ext.h; path = "sqlite-amalgamation-3350200/sqlite3ext.h"; sourceTree = "<group>"; };
+		3AE721AC0CC99B1632EE8582ED2ADC12 /* sqlite3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = sqlite3.debug.xcconfig; sourceTree = "<group>"; };
+		3B276DDAD13A72FDE479B3E24E25E437 /* Pods-Loper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loper.debug.xcconfig"; sourceTree = "<group>"; };
+		3E820E5F4AB01325BA10F01DBC714108 /* Pods-Loper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Loper.modulemap"; sourceTree = "<group>"; };
+		4417A1764BADD296AD9159098699B0ED /* sqlite3-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "sqlite3-dummy.m"; sourceTree = "<group>"; };
+		444D3D9918A89E4A3402081424BD456D /* Pods-Loper-LoperTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loper-LoperTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		57D2705F38F786138250D935EED3F778 /* sqlite3-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "sqlite3-prefix.pch"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		735453F81D30C35D5B1A51DF242D86FA /* Pods-Loper-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Loper-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7D61B300A4C84ACDB77CBB90D26FD424 /* Pods-Loper-LoperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loper-LoperTests.release.xcconfig"; sourceTree = "<group>"; };
+		9BE76ACFECD64C5E23FEE91C3BD49C38 /* Pods-Loper-LoperTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Loper-LoperTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9C1D66425B3F058332901ABDC028F63B /* sqlite3-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "sqlite3-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AF280CFD42A631D54E4F6308D8BE85AE /* Pods-Loper-LoperTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loper-LoperTests-Info.plist"; sourceTree = "<group>"; };
+		AF7C607BE6D85119FC8566CDEEE4C393 /* Pods-Loper-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loper-acknowledgements.plist"; sourceTree = "<group>"; };
+		B4507A8AA0AD81E8DFC98020268EFC72 /* sqlite3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = sqlite3.framework; path = sqlite3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD60C82F49AC7101FCDDAA73133C01F /* sqlite3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = sqlite3.modulemap; sourceTree = "<group>"; };
+		C471151B8CA774F54E4ABB2C659CCD5C /* Pods-Loper-LoperTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Loper-LoperTests.modulemap"; sourceTree = "<group>"; };
+		D063B00D505DF941A23068B6862F9A00 /* sqlite3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "sqlite3-umbrella.h"; sourceTree = "<group>"; };
+		D3115ADD75BFB0A35D70EA92E59674B7 /* sqlite3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = sqlite3.release.xcconfig; sourceTree = "<group>"; };
+		DF7561B0E32262005C6C897A7037F52A /* Pods_Loper_LoperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Loper_LoperTests.framework; path = "Pods-Loper-LoperTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E188AC2DFF22E67134054B3D6334295D /* Pods-Loper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loper.release.xcconfig"; sourceTree = "<group>"; };
+		E73C4C72887E1AD0B7A0ED95F2EB9A53 /* Pods_Loper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Loper.framework; path = "Pods-Loper.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7810C06F0184FAAFDF6B7C8E0502A06 /* Pods-Loper-LoperTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Loper-LoperTests-frameworks.sh"; sourceTree = "<group>"; };
+		F589FA7747B1EEDAE1D57075F1EB917D /* Pods-Loper-LoperTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Loper-LoperTests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27647CFBBA4F09DAD0DDFE3A32080EA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94599DB4D3A8CD08A4BFE10B71054F33 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C417D53318A1DEFA2B6AF6AC81C1DFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C455B855A39E7D6573DAF97B21B874 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A040A6DFA2B4AF18037BAED7D5365B21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADD707BAC8038030C2F6CDCD10DDF94 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03FDD725E22C1B7A434E13FAA66C70AD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F893F546060B7176991A9C55B86387D0 /* Pods-Loper */,
+				85D9FD5E78148B945669CC2259936CBD /* Pods-Loper-LoperTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		23FFDB2AF43A0AC1580678833C1B672C /* common */ = {
+			isa = PBXGroup;
+			children = (
+				23F234EBC40E824DE38F334B2C258995 /* sqlite3.c */,
+				2362DC453D373EEBA237271EF0AABEFF /* sqlite3.h */,
+				338BCFDD8863A541E9EE854F82770238 /* sqlite3ext.h */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6CF27D3ED505F20E419C11383E144EDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E73C4C72887E1AD0B7A0ED95F2EB9A53 /* Pods_Loper.framework */,
+				DF7561B0E32262005C6C897A7037F52A /* Pods_Loper_LoperTests.framework */,
+				B4507A8AA0AD81E8DFC98020268EFC72 /* sqlite3.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71F6C77D5518BD895153202ACB0B4206 /* sqlite3 */ = {
+			isa = PBXGroup;
+			children = (
+				23FFDB2AF43A0AC1580678833C1B672C /* common */,
+				E0535235A612A917B72CA31240EAFFD0 /* Support Files */,
+			);
+			name = sqlite3;
+			path = sqlite3;
+			sourceTree = "<group>";
+		};
+		85D9FD5E78148B945669CC2259936CBD /* Pods-Loper-LoperTests */ = {
+			isa = PBXGroup;
+			children = (
+				C471151B8CA774F54E4ABB2C659CCD5C /* Pods-Loper-LoperTests.modulemap */,
+				9BE76ACFECD64C5E23FEE91C3BD49C38 /* Pods-Loper-LoperTests-acknowledgements.markdown */,
+				444D3D9918A89E4A3402081424BD456D /* Pods-Loper-LoperTests-acknowledgements.plist */,
+				F589FA7747B1EEDAE1D57075F1EB917D /* Pods-Loper-LoperTests-dummy.m */,
+				E7810C06F0184FAAFDF6B7C8E0502A06 /* Pods-Loper-LoperTests-frameworks.sh */,
+				AF280CFD42A631D54E4F6308D8BE85AE /* Pods-Loper-LoperTests-Info.plist */,
+				09B4F43531DDA6660F55FFC13770F3C3 /* Pods-Loper-LoperTests-umbrella.h */,
+				173ED4A3C0C754C741FB02F0391A3EA9 /* Pods-Loper-LoperTests.debug.xcconfig */,
+				7D61B300A4C84ACDB77CBB90D26FD424 /* Pods-Loper-LoperTests.release.xcconfig */,
+			);
+			name = "Pods-Loper-LoperTests";
+			path = "Target Support Files/Pods-Loper-LoperTests";
+			sourceTree = "<group>";
+		};
+		94596F022DF7FF61686D92517836FE68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71F6C77D5518BD895153202ACB0B4206 /* sqlite3 */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				94596F022DF7FF61686D92517836FE68 /* Pods */,
+				6CF27D3ED505F20E419C11383E144EDA /* Products */,
+				03FDD725E22C1B7A434E13FAA66C70AD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0535235A612A917B72CA31240EAFFD0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDD60C82F49AC7101FCDDAA73133C01F /* sqlite3.modulemap */,
+				4417A1764BADD296AD9159098699B0ED /* sqlite3-dummy.m */,
+				9C1D66425B3F058332901ABDC028F63B /* sqlite3-Info.plist */,
+				57D2705F38F786138250D935EED3F778 /* sqlite3-prefix.pch */,
+				D063B00D505DF941A23068B6862F9A00 /* sqlite3-umbrella.h */,
+				3AE721AC0CC99B1632EE8582ED2ADC12 /* sqlite3.debug.xcconfig */,
+				D3115ADD75BFB0A35D70EA92E59674B7 /* sqlite3.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/sqlite3";
+			sourceTree = "<group>";
+		};
+		F893F546060B7176991A9C55B86387D0 /* Pods-Loper */ = {
+			isa = PBXGroup;
+			children = (
+				3E820E5F4AB01325BA10F01DBC714108 /* Pods-Loper.modulemap */,
+				735453F81D30C35D5B1A51DF242D86FA /* Pods-Loper-acknowledgements.markdown */,
+				AF7C607BE6D85119FC8566CDEEE4C393 /* Pods-Loper-acknowledgements.plist */,
+				18F52678974A55B3D584FB01CCC0F659 /* Pods-Loper-dummy.m */,
+				146D9802AA6C9826AA8887270FE48A7D /* Pods-Loper-Info.plist */,
+				011ED96856D7958B72B56FF83F296CFA /* Pods-Loper-umbrella.h */,
+				3B276DDAD13A72FDE479B3E24E25E437 /* Pods-Loper.debug.xcconfig */,
+				E188AC2DFF22E67134054B3D6334295D /* Pods-Loper.release.xcconfig */,
+			);
+			name = "Pods-Loper";
+			path = "Target Support Files/Pods-Loper";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0F3906B42B6A0337A4B716CB45BF6648 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C031BD9EA20466CCE957B72CA9F4BE0 /* Pods-Loper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		160A3CEEB578755BD3ACA3735F0A484D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B13B77EAADDA54AD0BB232FD0009B563 /* Pods-Loper-LoperTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DAE5690B0AAD0804ACB03D843374C8D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A306D6AF1C6D7C9DB8F042359F9BA16D /* sqlite3-umbrella.h in Headers */,
+				F9958EB3FE2D015864EE441A5F2A49FC /* sqlite3.h in Headers */,
+				B9332E043F031961EB6F0CED6ED162CA /* sqlite3ext.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6AD322E7AEDD417B1C37DBB61EE7FCDD /* Pods-Loper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F32E58D233D296AC651250778A094A41 /* Build configuration list for PBXNativeTarget "Pods-Loper" */;
+			buildPhases = (
+				0F3906B42B6A0337A4B716CB45BF6648 /* Headers */,
+				751413CDD740556E6A70E5B3DBAE17E9 /* Sources */,
+				27647CFBBA4F09DAD0DDFE3A32080EA7 /* Frameworks */,
+				838C47744E7416D40A37266BA1217905 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EF70DC1039AA5372135253D6EFFE640 /* PBXTargetDependency */,
+			);
+			name = "Pods-Loper";
+			productName = "Pods-Loper";
+			productReference = E73C4C72887E1AD0B7A0ED95F2EB9A53 /* Pods_Loper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7578477CA77D98D8282C395822C4A93C /* sqlite3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2556AD641776A6E17916054177EDC932 /* Build configuration list for PBXNativeTarget "sqlite3" */;
+			buildPhases = (
+				6DAE5690B0AAD0804ACB03D843374C8D /* Headers */,
+				45DDFE924025C4003AA618C9EDC7F75F /* Sources */,
+				5C417D53318A1DEFA2B6AF6AC81C1DFD /* Frameworks */,
+				D432B0DC027C66C3D16673B9FB2C9B0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sqlite3;
+			productName = sqlite3;
+			productReference = B4507A8AA0AD81E8DFC98020268EFC72 /* sqlite3.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7D925CA17E146C8C1D8B918FFFF0CC1C /* Pods-Loper-LoperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B52E0D03C267FDB31287D8483D741E08 /* Build configuration list for PBXNativeTarget "Pods-Loper-LoperTests" */;
+			buildPhases = (
+				160A3CEEB578755BD3ACA3735F0A484D /* Headers */,
+				974AC9421C0A60C811782616AD5F2B47 /* Sources */,
+				A040A6DFA2B4AF18037BAED7D5365B21 /* Frameworks */,
+				7A7DDB66E4D2659CD5123E3150D44FA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				249303B4F65FF71FC6C1D90AADD994F6 /* PBXTargetDependency */,
+			);
+			name = "Pods-Loper-LoperTests";
+			productName = "Pods-Loper-LoperTests";
+			productReference = DF7561B0E32262005C6C897A7037F52A /* Pods_Loper_LoperTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 6CF27D3ED505F20E419C11383E144EDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AD322E7AEDD417B1C37DBB61EE7FCDD /* Pods-Loper */,
+				7D925CA17E146C8C1D8B918FFFF0CC1C /* Pods-Loper-LoperTests */,
+				7578477CA77D98D8282C395822C4A93C /* sqlite3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A7DDB66E4D2659CD5123E3150D44FA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838C47744E7416D40A37266BA1217905 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D432B0DC027C66C3D16673B9FB2C9B0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45DDFE924025C4003AA618C9EDC7F75F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED3AB36A0EB83AA15124D638B0FEE9AB /* sqlite3-dummy.m in Sources */,
+				248474C9879A4F7C55BDA0C2D17C2608 /* sqlite3.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751413CDD740556E6A70E5B3DBAE17E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B28E0A4276BD801B99AE0DF01357936 /* Pods-Loper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		974AC9421C0A60C811782616AD5F2B47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE322608A75C2DAEFB86DFBF5B05A3CC /* Pods-Loper-LoperTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		249303B4F65FF71FC6C1D90AADD994F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sqlite3;
+			target = 7578477CA77D98D8282C395822C4A93C /* sqlite3 */;
+			targetProxy = C03129BCCD1B262EEA3256464080B9A7 /* PBXContainerItemProxy */;
+		};
+		4EF70DC1039AA5372135253D6EFFE640 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sqlite3;
+			target = 7578477CA77D98D8282C395822C4A93C /* sqlite3 */;
+			targetProxy = 6D9A8F9F0A88E71787AE739AD6CFC5E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		18556C1DB8D23E0FDD85D670FF1A2FA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 173ED4A3C0C754C741FB02F0391A3EA9 /* Pods-Loper-LoperTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Loper-LoperTests/Pods-Loper-LoperTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Loper-LoperTests/Pods-Loper-LoperTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		473179FEDFD640DF0520715155B718B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B276DDAD13A72FDE479B3E24E25E437 /* Pods-Loper.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Loper/Pods-Loper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Loper/Pods-Loper.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4AC6409BAB4A863CC2375171249D8A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E188AC2DFF22E67134054B3D6334295D /* Pods-Loper.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Loper/Pods-Loper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Loper/Pods-Loper.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C93E18119E6A07B7BB4788D2461BBF2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AE721AC0CC99B1632EE8582ED2ADC12 /* sqlite3.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/sqlite3/sqlite3-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/sqlite3/sqlite3-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/sqlite3/sqlite3.modulemap";
+				PRODUCT_MODULE_NAME = sqlite3;
+				PRODUCT_NAME = sqlite3;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		CA5D8554D901C9B9C5CE29A96651989D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3115ADD75BFB0A35D70EA92E59674B7 /* sqlite3.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/sqlite3/sqlite3-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/sqlite3/sqlite3-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/sqlite3/sqlite3.modulemap";
+				PRODUCT_MODULE_NAME = sqlite3;
+				PRODUCT_NAME = sqlite3;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E1D54E3F08B3994334CE189AC3633BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D61B300A4C84ACDB77CBB90D26FD424 /* Pods-Loper-LoperTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Loper-LoperTests/Pods-Loper-LoperTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Loper-LoperTests/Pods-Loper-LoperTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2556AD641776A6E17916054177EDC932 /* Build configuration list for PBXNativeTarget "sqlite3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C93E18119E6A07B7BB4788D2461BBF2D /* Debug */,
+				CA5D8554D901C9B9C5CE29A96651989D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B52E0D03C267FDB31287D8483D741E08 /* Build configuration list for PBXNativeTarget "Pods-Loper-LoperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18556C1DB8D23E0FDD85D670FF1A2FA0 /* Debug */,
+				E1D54E3F08B3994334CE189AC3633BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F32E58D233D296AC651250778A094A41 /* Build configuration list for PBXNativeTarget "Pods-Loper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				473179FEDFD640DF0520715155B718B8 /* Debug */,
+				4AC6409BAB4A863CC2375171249D8A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

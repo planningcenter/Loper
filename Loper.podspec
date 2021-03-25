@@ -5,12 +5,13 @@ Pod::Spec.new do |spec|
   spec.description  = <<-DESC
   This projects Caches our API calls
                    DESC
-  spec.homepage     = "https://github.com/ministrycentered/Loper"
+  spec.homepage     = "https://github.com/planningcenter/Loper"
   spec.license      = "MIT"
   spec.author       = "Erik Bye"
   spec.platform     = :ios, "11.0"
-  spec.source       = { :git => "git@github.com:ministrycentered/Loper.git", :tag => "#{spec.version}" }
-  spec.source_files = "Loper/*.{swift,h,c}"
+  spec.source       = { :git => "git@github.com:planningcenter/Loper.git", :tag => "#{spec.version}" }
+  spec.dependency 'sqlite3'
+  spec.source_files = "Loper", "Loper/**/*.{h,c,swift}"
   spec.swift_version = '5.0'
   spec.exclude_files = "Classes/Exclude"
 end

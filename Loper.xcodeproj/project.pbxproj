@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B07D9DE532284904274F390 /* Pods_Loper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818923A8D96BBF8F9B70D5BE /* Pods_Loper.framework */; };
 		948FB0A21E4D046E002F0200 /* Loper.h in Headers */ = {isa = PBXBuildFile; fileRef = 948FB0A01E4D046E002F0200 /* Loper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		948FB0AF1E4D0489002F0200 /* LoperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0AE1E4D0489002F0200 /* LoperTests.m */; };
 		948FB0B11E4D0489002F0200 /* Loper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948FB09D1E4D046E002F0200 /* Loper.framework */; };
 		948FB0B91E4D0584002F0200 /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0B81E4D0584002F0200 /* Mutex.swift */; };
-		948FB0C01E4D0668002F0200 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0BD1E4D0668002F0200 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations -Wno-unreachable-code -Wno-ambiguous-macro -Wno-conversion -Wno-comma"; }; };
-		948FB0C11E4D0668002F0200 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 948FB0BE1E4D0668002F0200 /* sqlite3.h */; };
 		948FB0CB1E4D0C2B002F0200 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0CA1E4D0C2B002F0200 /* Store.swift */; };
 		948FB0CE1E4D0FC2002F0200 /* SQLiteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0CD1E4D0FC2002F0200 /* SQLiteError.swift */; };
 		948FB0D21E4D1103002F0200 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0D11E4D1103002F0200 /* Database.swift */; };
@@ -23,6 +22,7 @@
 		948FB0DC1E4D3497002F0200 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0DB1E4D3497002F0200 /* Logger.swift */; };
 		948FB0DE1E4D72A9002F0200 /* ResultBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FB0DD1E4D72A9002F0200 /* ResultBuilder.swift */; };
 		94EE0B011E4E6DDC00CF40F0 /* EncodedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE0B001E4E6DDC00CF40F0 /* EncodedObject.swift */; };
+		E7CAB2AFF62E5E89ADE5A560 /* Pods_Loper_LoperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECBAA34F6BC075600A5735F /* Pods_Loper_LoperTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22D35F85260D2A84000C081F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
+		22D35F86260D2A8C000C081F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/lib/libsqlite3.0.tbd; sourceTree = DEVELOPER_DIR; };
+		25B4576E65C8D8C9A1FB015C /* Pods-Loper-LoperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loper-LoperTests.release.xcconfig"; path = "Target Support Files/Pods-Loper-LoperTests/Pods-Loper-LoperTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A9F6894F9A8D9280C74DEE0 /* Pods-Loper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loper.debug.xcconfig"; path = "Target Support Files/Pods-Loper/Pods-Loper.debug.xcconfig"; sourceTree = "<group>"; };
+		818923A8D96BBF8F9B70D5BE /* Pods_Loper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		948FB09D1E4D046E002F0200 /* Loper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Loper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		948FB0A01E4D046E002F0200 /* Loper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Loper.h; sourceTree = "<group>"; };
 		948FB0A11E4D046E002F0200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,8 +48,6 @@
 		948FB0AE1E4D0489002F0200 /* LoperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoperTests.m; sourceTree = "<group>"; };
 		948FB0B01E4D0489002F0200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		948FB0B81E4D0584002F0200 /* Mutex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
-		948FB0BD1E4D0668002F0200 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
-		948FB0BE1E4D0668002F0200 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		948FB0C41E4D06CF002F0200 /* Project-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Base.xcconfig"; sourceTree = "<group>"; };
 		948FB0C51E4D06E1002F0200 /* Project-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
 		948FB0C61E4D06EB002F0200 /* Project-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +64,9 @@
 		948FB0DB1E4D3497002F0200 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		948FB0DD1E4D72A9002F0200 /* ResultBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultBuilder.swift; sourceTree = "<group>"; };
 		94EE0B001E4E6DDC00CF40F0 /* EncodedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodedObject.swift; sourceTree = "<group>"; };
+		AF8EA9E161E5E8ED492F7225 /* Pods-Loper-LoperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loper-LoperTests.debug.xcconfig"; path = "Target Support Files/Pods-Loper-LoperTests/Pods-Loper-LoperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DECBAA34F6BC075600A5735F /* Pods_Loper_LoperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loper_LoperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7057AD081E9A4CA3D1A41E2 /* Pods-Loper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loper.release.xcconfig"; path = "Target Support Files/Pods-Loper/Pods-Loper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B07D9DE532284904274F390 /* Pods_Loper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +83,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				948FB0B11E4D0489002F0200 /* Loper.framework in Frameworks */,
+				E7CAB2AFF62E5E89ADE5A560 /* Pods_Loper_LoperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		057E050BEAC53DFB6E6B594F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A9F6894F9A8D9280C74DEE0 /* Pods-Loper.debug.xcconfig */,
+				E7057AD081E9A4CA3D1A41E2 /* Pods-Loper.release.xcconfig */,
+				AF8EA9E161E5E8ED492F7225 /* Pods-Loper-LoperTests.debug.xcconfig */,
+				25B4576E65C8D8C9A1FB015C /* Pods-Loper-LoperTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		22D35F84260D2A84000C081F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22D35F86260D2A8C000C081F /* libsqlite3.0.tbd */,
+				22D35F85260D2A84000C081F /* libsqlite3.tbd */,
+				818923A8D96BBF8F9B70D5BE /* Pods_Loper.framework */,
+				DECBAA34F6BC075600A5735F /* Pods_Loper_LoperTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		948FB0931E4D046D002F0200 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +119,8 @@
 				948FB09F1E4D046E002F0200 /* Loper */,
 				948FB0AD1E4D0489002F0200 /* LoperTests */,
 				948FB09E1E4D046E002F0200 /* Products */,
+				22D35F84260D2A84000C081F /* Frameworks */,
+				057E050BEAC53DFB6E6B594F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,20 +163,10 @@
 		948FB0B71E4D0534002F0200 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				948FB0BA1E4D0668002F0200 /* sqlite */,
 				948FB0A01E4D046E002F0200 /* Loper.h */,
 				948FB0A11E4D046E002F0200 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		948FB0BA1E4D0668002F0200 /* sqlite */ = {
-			isa = PBXGroup;
-			children = (
-				948FB0BD1E4D0668002F0200 /* sqlite3.c */,
-				948FB0BE1E4D0668002F0200 /* sqlite3.h */,
-			);
-			path = sqlite;
 			sourceTree = "<group>";
 		};
 		948FB0C31E4D06BC002F0200 /* Config */ = {
@@ -176,7 +198,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				948FB0C11E4D0668002F0200 /* sqlite3.h in Headers */,
 				948FB0A21E4D046E002F0200 /* Loper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 948FB0A51E4D046E002F0200 /* Build configuration list for PBXNativeTarget "Loper" */;
 			buildPhases = (
+				20CF07D78A4637DD11D7F080 /* [CP] Check Pods Manifest.lock */,
 				948FB0981E4D046D002F0200 /* Sources */,
 				948FB0991E4D046D002F0200 /* Frameworks */,
 				948FB09A1E4D046D002F0200 /* Headers */,
@@ -206,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 948FB0B41E4D0489002F0200 /* Build configuration list for PBXNativeTarget "LoperTests" */;
 			buildPhases = (
+				8097EF7A740F388C3E5D5AB9 /* [CP] Check Pods Manifest.lock */,
 				948FB0A81E4D0489002F0200 /* Sources */,
 				948FB0A91E4D0489002F0200 /* Frameworks */,
 				948FB0AA1E4D0489002F0200 /* Resources */,
+				8C42168D83E877C646673533 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,6 +300,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20CF07D78A4637DD11D7F080 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Loper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8097EF7A740F388C3E5D5AB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Loper-LoperTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C42168D83E877C646673533 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Loper-LoperTests/Pods-Loper-LoperTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/sqlite3/sqlite3.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sqlite3.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Loper-LoperTests/Pods-Loper-LoperTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		948FB0981E4D046D002F0200 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -292,7 +381,6 @@
 				948FB0B91E4D0584002F0200 /* Mutex.swift in Sources */,
 				948FB0D21E4D1103002F0200 /* Database.swift in Sources */,
 				948FB0DA1E4D27C1002F0200 /* Normalizer.swift in Sources */,
-				948FB0C01E4D0668002F0200 /* sqlite3.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +438,7 @@
 		};
 		948FB0B51E4D0489002F0200 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF8EA9E161E5E8ED492F7225 /* Pods-Loper-LoperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LoperTests/Info.plist;
@@ -361,6 +450,7 @@
 		};
 		948FB0B61E4D0489002F0200 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25B4576E65C8D8C9A1FB015C /* Pods-Loper-LoperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LoperTests/Info.plist;
