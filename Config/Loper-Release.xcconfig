@@ -7,3 +7,4 @@
 //
 
 #include "Loper-Base.xcconfig"
+#include "Pods/Target Support Files/Pods-Loper/Pods-Loper.release.xcconfig"
