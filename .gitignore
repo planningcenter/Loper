@@ -27,6 +27,8 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
+Pods
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
