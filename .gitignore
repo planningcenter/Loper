@@ -27,7 +27,7 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
-Pods
+Pods/
 
 ## Playgrounds
 timeline.xctimeline
